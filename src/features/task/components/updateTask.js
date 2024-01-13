@@ -42,7 +42,7 @@ const UpdateTask = ({ task }) => {
   return (
     <div className=" ">
       <div
-        className="text-blue-600 dark:text-blue-500 hover:underline cursor-pointer"
+        className="text-blue-400 text-xs dark:text-blue-500 hover:underline cursor-pointer"
         onClick={() => setShowModal(true)}
       >
         Edit{" "}

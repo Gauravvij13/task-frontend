@@ -33,7 +33,7 @@ const Tasks = () => {
       }}
     >
       <div className="w-full flex justify-center flex-col items-center ">
-        <div className="w-3/5">
+        <div className="w-full md:px-10 lg:px-20">
           <AddTask />
           <TaskTable tasks={tasks || []} />
         </div>

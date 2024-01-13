@@ -12,7 +12,10 @@ const Signup = ({ styles }) => {
 
   const ValidationSchema = yup.object().shape({
     name: yup.string().required("This Field is required"),
-    email: yup.string().required("This Field is required"),
+    email: yup
+      .string()
+      .email("Invalid email")
+      .required("This Field is required"),
     password: yup.string().required("This Field is required"),
   });
 
@@ -40,7 +43,7 @@ const Signup = ({ styles }) => {
 
   return (
     <>
-      <h1 className="text-bold text-left text-xl mb-5 bg-yellow-500 p-5 shadow-lg">
+      <h1 className="text-bold text-left text-sm  md:text-xl mb-5 bg-yellow-500 p-5 shadow-lg">
         Signup for Task Management
       </h1>
       <Formik
@@ -62,7 +65,7 @@ const Signup = ({ styles }) => {
             type="password"
           />
 
-          <div className="mt-8">
+          <div className="mt-5 md:mt-8">
             <button
               className="rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300"
               type="submit"

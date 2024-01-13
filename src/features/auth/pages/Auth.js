@@ -8,7 +8,7 @@ const Auth = () => {
     setLoginMode((prev) => !prev);
   };
   return (
-    <div className="flex-col w-3/5 flex items-center justify-center">
+    <div className="flex-col w-full md:w-3/5 flex items-center justify-center">
       {loginMode ? <Login /> : <Signup />}
       <div className="w-2/5 flex justify-center mt-5">
         <button
