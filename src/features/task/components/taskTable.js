@@ -57,9 +57,11 @@ const TaskTable = ({ tasks }) => {
             {task?.description}
           </p>
           <div className="absolute top-2 right-4">
-            <div class="inline-flex items-center ">
-              <UpdateTask task={task} />
-            </div>
+            {!task?.completionStatus && (
+              <div class="inline-flex items-center ">
+                <UpdateTask task={task} />
+              </div>
+            )}
             <div
               onClick={() => handleDelete(task?._id)}
               className="inline-flex text-xs items-center text-red-400 hover:underline ml-2 cursor-pointer"
